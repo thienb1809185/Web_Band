@@ -1,9 +1,11 @@
 1 Header ok
 2 Slider ok 
 3 Content
-    About
+    About ok
     Tour
     Contact
     image
 4 footer
+
+Website mẫu: https://www.w3schools.com/w3css/tryw3css_templates_band.htm
 
