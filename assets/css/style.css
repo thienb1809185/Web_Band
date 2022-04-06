@@ -6,6 +6,7 @@
 
 html{
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 /* 
     1. Vi tri
@@ -15,10 +16,74 @@ html{
 
 */
 
-#app{
+
+
+.text-white{
+    color: #fff !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third{
+    width: 33.333333%;
+}
+
+.col-half{
+    width: 50%;
+}
+
+
+.col-full{
+    width: 100%;
+}
+
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 10px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
 
 }
 
+.btn:hover{
+    background-color: #888;
+}
 #header{
     height: 46px;
     background-color: #000;
@@ -142,7 +207,7 @@ html{
 
 }
 #content{
-    height: 1000px;
+
     background-color: #ccc;
 
 }
@@ -152,7 +217,7 @@ html{
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0px;
+    padding: 64px 0px 112px;
 
 }
 #content .section-heading{
@@ -182,11 +247,7 @@ html{
 
 
 }
-#content .member-item{
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
-}
+
 #content .clear{
     clear: both;
 }
@@ -204,11 +265,13 @@ html{
 /* tour section */
 #content .tour-section{
     background-color: #000;
+    
+
 }
 
 #content .tour-section .content-section{
     z-index: 1;
-    color: #fff;
+   
 }
 
 
@@ -221,17 +284,247 @@ html{
 #content .tickets-list li{
     list-style: none;
     font-size: 15px;
+    line-height: 40px;
+    border-bottom: 1px solid #888;
+    padding-left: 20px;
+    color: #757575;
+    font-weight: 600;
     
 
 }
 
 #content .tickets-list .sold-out{
+    color: #fff;
+    background-color: #f44336;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+#content .tickets-list .quantity{
+    color: #fff;
+    background-color: #333;
+    padding: 0px 10px;
+    border-radius: 50%;
+    float: right;
+    margin: 5px 0px;
+    margin-right: 40px;
+    line-height: 30px; 
+}
 
+.places-list{
+
+    margin-top: 32px;
+    margin-bottom: 48px;
 }
 
 
+.place-img{
+
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    padding: 16px;
+    background-color: #fff;
+    font-size: 15px;
+}
+.place-heading{
+
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+.place-time{
+    margin-top: 15PX;
+    color: #757575;
+
+    
+}
+.place-desc{
+
+    margin-top: 15PX;
+    line-height: 1.6;
+}
+
+
+.place-buy-btn:hover{
+    background-color: #ccc;
+}
+
+
+
+.contact-content{
+    margin-top: 48px;
+}
+
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+
+}
+.map-section img{
+    width: 100%;
+}
 /* footer section */
 #footer{
+    padding: 64px 16px;
+  
+    text-align: center;
+}
+
+#footer p{
+    margin-top: 10px;
+}
+#footer i{
+    padding: 5px 10px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.5);
+}
+#footer a{
+    text-decoration: none;
+}
+
+.socials-list{
 
 }
 
+.modal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+}
+
+.open{
+    display: flex;
+}
+
+.modal-container{
+    width: 900px;
+    max-width: calc( 100% - 32px );
+    background-color: #fff;
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.3s;
+
+
+}
+.modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+   cursor: pointer;
+    padding: 8px 16px;
+
+}
+.modal-close li{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.modal-close:hover{
+    opacity: 0.8;
+}
+
+
+header .modal-bag{
+    margin-right: 15px;
+
+}
+.modal-body{
+    padding: 16px;
+
+}
+.modal-label{
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    
+
+}
+.modal-input{
+    line-height: 46px;
+    width: 100%;
+    padding-left: 20px;
+
+
+}
+
+#buy-tickets{
+    display: block;
+    line-height: 46px;
+    color: #fff;
+    background-color: #009688;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+#buy-tickets:hover{
+    opacity: 0.9;
+}
+
+.modal-footer{
+    padding: 10px 16px 16px 0;
+    text-align: right;
+
+}
+
+.modal-footer a{
+    color: rgb(86, 250, 250);
+}
+
+
+
+@keyframes modalFadeIn{
+    from{
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+ 
+    to{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}

@@ -2,10 +2,23 @@
 2 Slider ok 
 3 Content
     About ok
-    Tour
+    Tour ok
     Contact
     image
 4 footer
 
 Website mẫu: https://www.w3schools.com/w3css/tryw3css_templates_band.htm
 
+   <div id="footers">
+            <div class="socials-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="">w3.css</a></p>
+
+        </div>
+       
